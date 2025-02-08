@@ -1,4 +1,4 @@
-<h1 align="center">Diego García Site</h1>
+<h1 align="center">Diego García</h1>
 <h3 align="center">Ⅺ</h3>
 <h3 align="center">Software Engineering Student at University of Oviedo</h3>
 

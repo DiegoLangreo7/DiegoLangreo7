@@ -2,7 +2,7 @@
 <h3 align="center">Ⅺ</h3>
 <h3 align="center">Software Engineering Student at University of Oviedo</h3>
 
-## <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="30"> Sobre mí
+# <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="30"> Sobre mí
 
 ⛰️🌊 Desarrollador independiente, guionista y aventurero a tiempo parcial
 

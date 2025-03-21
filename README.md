@@ -2,19 +2,17 @@
 <h3 align="center">Ⅺ</h3>
 <h3 align="center">Software Engineering Student at University of Oviedo</h3>
 
-# <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="30"> Sobre mí
+# <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="30"> About me
 
-⛰️🌊 Desarrollador independiente, guionista y aventurero a tiempo parcial
+⛰️🌊 Freelance developer, screenwriter, and part-time adventurer.
 
-🔭 Actualmente estudiando en: **Escuela de Ingeniería Informatica del Software, UNIOVI**
-
-💬 Pregúntame sobre: Como sacar una ingeniería sin fallecer en el intento.
+📔🔭 Currently studying
 
 <p style="display: flex; gap: 2em" align="center">
   <img src="Multimedia/monokuma.gif" width="40%">
 </p>
 
-# Tecnologías y Herramientas
+# Programming languages ​​and technologies
 
 ### Programming Languages
 <p align="left">
@@ -61,6 +59,10 @@
 <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" style="display: inline-block;"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="42" height="42" /></a>
 <a target="_blank" href="https://www.r-project.org/logo/Rlogo.svg" style="display: inline-block;"><img src="https://www.r-project.org/logo/Rlogo.svg" alt="R" width="42" height="42" /></a>
 </p>
+
+# My Github account
+
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=DiegoLangreo7&label=Profile%20views&color=c40000&style=flat" alt="DiegoLangreo7" /> </p> 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/diegolangreo7/diegolangreo7/output/github-snake-dark.svg" />

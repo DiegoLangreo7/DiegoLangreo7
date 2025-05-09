@@ -2,7 +2,7 @@ name: Update GitHub Stats in README
 
 on:
   schedule:
-    - cron: "0 0 * * *"  
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -29,7 +29,21 @@ jobs:
       - name: Update README
         run: |
           echo "Updating README.md..."
-          sed -i.bak '/<!--STATS_START-->/, /<!--STATS_END-->/c\<!--STATS_START-->\n![GitHub Stats](./stats.svg)\n![Streak Stats](./streak.svg)\n![Trophies](./trophies.svg)\n<!--STATS_END-->' README.md
+          perl -0777 -i -pe '
+            s{<!--STATS_START-->.*?<!--STATS_END-->}{
+              "<!--STATS_START-->\n\n" .
+              "## 📊 GitHub Stats\n" .
+              "<div align=\"center\">\n\n" .
+              "![GitHub Stats](./stats.svg)\n" .
+              "![Streak Stats](./streak.svg)\n\n" .
+              "</div>\n\n" .
+              "## 🏆 GitHub Trophies\n\n" .
+              "<div align=\"center\">\n\n" .
+              "![Trophies](./trophies.svg)\n\n" .
+              "</div>\n" .
+              "<!--STATS_END-->"
+            }gsx
+          ' README.md
 
       - name: Configure Git
         run: |

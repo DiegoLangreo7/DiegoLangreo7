@@ -120,3 +120,10 @@
 <p style="display: flex; gap: 2em" align="center">
   <img src="Multimedia/pokachu.gif" width="40%">
 </p>
+
+<!--STATS_START-->
+![GitHub Stats](./stats.svg)
+![Streak Stats](./streak.svg)
+![Trophies](./trophies.svg)
+<!--STATS_END-->
+

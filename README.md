@@ -107,11 +107,36 @@
   </picture>
 </div>
 
-<!--STATS_START-->
-![GitHub Stats](./stats.svg)
-![Streak Stats](./streak.svg)
-![Trophies](./trophies.svg)
-<!--STATS_END-->
+
+    "<!--STATS_START-->
+
+" .
+    "## 📊 GitHub Stats
+" .
+    "<div align="center">
+
+" .
+    "![GitHub Stats](./stats.svg)
+" .
+    "![Streak Stats](./streak.svg)
+
+" .
+    "</div>
+
+" .
+    "## 🏆 GitHub Trophies
+
+" .
+    "<div align="center">
+
+" .
+    "![Trophies](./trophies.svg)
+
+" .
+    "</div>
+" .
+    "<!--STATS_END-->"
+  
 
 ---
 

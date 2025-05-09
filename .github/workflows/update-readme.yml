@@ -36,7 +36,7 @@ jobs:
             const fs = require('fs');
             const path = 'README.md';
             let content = fs.readFileSync(path, 'utf8');
-            const block = `
+            const block = 
             <!--STATS_START-->
             
             ## 📊 GitHub Stats
@@ -55,7 +55,7 @@ jobs:
 
             </div>
             <!--STATS_END-->
-            `;
+            ;
             const updated = content.replace(/<!--STATS_START-->[\s\S]*?<!--STATS_END-->/, block);
             fs.writeFileSync(path, updated, 'utf8');
 

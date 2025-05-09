@@ -99,7 +99,7 @@
   <img alt="github-snake" src="https://raw.githubusercontent.com/diegolangreo7/diegolangreo7/output/github-snake.svg" />
 </picture>
 
-# 📊 GitHub Stats:
+## 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=DiegoLangreo7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=DiegoLangreo7&theme=transparent&hide_border=true)<br/>
 

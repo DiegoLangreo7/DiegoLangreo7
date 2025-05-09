@@ -36,7 +36,8 @@ jobs:
             const fs = require('fs');
             const path = 'README.md';
             let content = fs.readFileSync(path, 'utf8');
-            const block = `<!--STATS_START-->
+            const block = `
+            <!--STATS_START-->
             
             ## 📊 GitHub Stats
             <div align="center">
@@ -53,13 +54,14 @@ jobs:
             ![Trophies](./trophies.svg)
 
             </div>
-            <!--STATS_END-->`;
+            <!--STATS_END-->
+            `;
             const updated = content.replace(/<!--STATS_START-->[\s\S]*?<!--STATS_END-->/, block);
             fs.writeFileSync(path, updated, 'utf8');
 
       - name: Configure Git
         run: |
-          git config --global user.name "Diego Langreo"
+          git config --global user.name "DiegoLangreo7"
           git config --global user.email "uo294255@uniovi.es"
 
       - name: Commit and Push changes

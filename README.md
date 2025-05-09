@@ -108,7 +108,8 @@
 </div>
 
 
-    "<!--STATS_START-->
+    "
+<!--STATS_START-->
 
 ## 📊 GitHub Stats
 <div align="center">
@@ -125,7 +126,8 @@
 ![Trophies](./trophies.svg)
 
 </div>
-<!--STATS_END-->"
+<!--STATS_END-->
+"
   
 
 ---

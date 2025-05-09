@@ -28,22 +28,41 @@ jobs:
 
       - name: Update README
         run: |
-          echo "Updating README.md..."
-          perl -0777 -i -pe '
-            s{<!--STATS_START-->.*?<!--STATS_END-->}{
-              "<!--STATS_START-->\n\n" .
-              "## 📊 GitHub Stats\n" .
-              "<div align=\"center\">\n\n" .
-              "![GitHub Stats](./stats.svg)\n" .
-              "![Streak Stats](./streak.svg)\n\n" .
-              "</div>\n\n" .
-              "## 🏆 GitHub Trophies\n\n" .
-              "<div align=\"center\">\n\n" .
-              "![Trophies](./trophies.svg)\n\n" .
-              "</div>\n" .
-              "<!--STATS_END-->"
-            }egsx;
-          ' README.md
+          echo "Updating README.md with Python..."
+          python3 - <<'EOF'
+import re
+
+# Lee el README
+with open('README.md', 'r', encoding='utf-8') as f:
+    text = f.read()
+
+# Define el bloque exacto que quieres insertar
+bloque = '''<!--STATS_START-->
+
+## 📊 GitHub Stats
+<div align="center">
+
+![GitHub Stats](./stats.svg)
+![Streak Stats](./streak.svg)
+
+</div>
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+
+![Trophies](./trophies.svg)
+
+</div>
+<!--STATS_END-->'''
+
+# Reemplaza todo entre las dos etiquetas (inclusive) por 'bloque'
+nuevo = re.sub(r'<!--STATS_START-->.*?<!--STATS_END-->', bloque, text, flags=re.S)
+
+# Escribe de vuelta
+with open('README.md', 'w', encoding='utf-8') as f:
+    f.write(nuevo)
+EOF
 
       - name: Configure Git
         run: |

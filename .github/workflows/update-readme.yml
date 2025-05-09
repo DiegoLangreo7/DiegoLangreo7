@@ -1,4 +1,3 @@
-# .github/workflows/update-readme.yml
 name: Update README with GitHub Stats
 
 on:
@@ -12,26 +11,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
       - name: Generate GitHub Stats
         run: |
           echo "Generating GitHub Stats..."
           curl -s -o stats.svg "https://github-readme-stats.vercel.app/api?username=DiegoLangreo7&show_icons=true&theme=tokyonight&count_private=true"
           curl -s -o streak.svg "https://nirzak-streak-stats.vercel.app/?user=DiegoLangreo7&theme=tokyonight&hide_border=true"
           curl -s -o trophies.svg "https://github-profile-trophy.vercel.app/?username=DiegoLangreo7&theme=radical&no-frame=true&no-bg=true&margin-w=4"
-
       - name: Validate SVG files
         run: |
-          for f in stats.svg streak.svg trophies.svg; do
-            if [[ ! -s $f ]]; then
-              echo "Error: $f is missing or empty"
+          for file in stats.svg streak.svg trophies.svg; do
+            if [ ! -s "$file" ]; then
+              echo "Error: $file is missing or empty"
               exit 1
             fi
           done
-
       - name: Update README via github-script
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
             let content = fs.readFileSync('README.md', 'utf8');
@@ -53,14 +50,12 @@ jobs:
 
 </div>
 <!--STATS_END-->`;
-            const updated = content.replace(/<!--STATS_START-->[\s\S]*?<!--STATS_END-->/, block);
-            fs.writeFileSync('README.md', updated, 'utf8');
-
+            content = content.replace(/<!--STATS_START-->[\s\S]*?<!--STATS_END-->/, block);
+            fs.writeFileSync('README.md', content, 'utf8');
       - name: Configure Git
         run: |
-          git config user.name "Diego Langreo"
-          git config user.email "uo294255@uniovi.es"
-
+          git config --global user.name "Diego Langreo"
+          git config --global user.email "uo294255@uniovi.es"
       - name: Commit and Push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

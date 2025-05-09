@@ -37,23 +37,23 @@ jobs:
             const path = 'README.md';
             let content = fs.readFileSync(path, 'utf8');
             const block = `<!--STATS_START-->
+            
+            ## 📊 GitHub Stats
+            <div align="center">
 
-## 📊 GitHub Stats
-<div align="center">
+            ![GitHub Stats](./stats.svg)
+            ![Streak Stats](./streak.svg)
 
-![GitHub Stats](./stats.svg)
-![Streak Stats](./streak.svg)
+            </div>
 
-</div>
+            ## 🏆 GitHub Trophies
 
-## 🏆 GitHub Trophies
+            <div align="center">
 
-<div align="center">
+            ![Trophies](./trophies.svg)
 
-![Trophies](./trophies.svg)
-
-</div>
-<!--STATS_END-->`;
+            </div>
+            <!--STATS_END-->`;
             const updated = content.replace(/<!--STATS_START-->[\s\S]*?<!--STATS_END-->/, block);
             fs.writeFileSync(path, updated, 'utf8');
 

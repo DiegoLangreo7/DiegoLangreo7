@@ -42,7 +42,7 @@ jobs:
               "![Trophies](./trophies.svg)\n\n" .
               "</div>\n" .
               "<!--STATS_END-->"
-            }gsx
+            }egsx;
           ' README.md
 
       - name: Configure Git

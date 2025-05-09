@@ -91,21 +91,30 @@
 
 # My Github account
 
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=DiegoLangreo7&label=Profile%20views&color=c40000&style=flat" alt="DiegoLangreo7" /> </p> 
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=DiegoLangreo7&label=Profile%20views&color=c40000&style=flat" alt="DiegoLangreo7" />
+</div>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/diegolangreo7/diegolangreo7/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/diegolangreo7/diegolangreo7/output/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/diegolangreo7/diegolangreo7/output/github-snake.svg" />
-</picture>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/diegolangreo7/diegolangreo7/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/diegolangreo7/diegolangreo7/output/github-snake.svg" />
+    <img alt="github-snake" src="https://raw.githubusercontent.com/diegolangreo7/diegolangreo7/output/github-snake.svg" />
+  </picture>
+</div>
 
 ## 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=DiegoLangreo7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=DiegoLangreo7&theme=transparent&hide_border=true)<br/>
-
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=DiegoLangreo7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true"/>
+  <br/>
+  <img src="https://nirzak-streak-stats.vercel.app/?user=DiegoLangreo7&theme=transparent&hide_border=true"/>
+</div>
 
 ## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=DiegoLangreo7&theme=radical&no-frame=true&no-bg=true&margin-w=4)
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=DiegoLangreo7&theme=radical&no-frame=true&no-bg=true&margin-w=4"/>
+</div>
+
 
 
 <p style="display: flex; gap: 2em" align="center">

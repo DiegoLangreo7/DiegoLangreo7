@@ -1,0 +1,45 @@
+name: Update GitHub Stats in README
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate GitHub Stats
+        run: |
+          echo "Generating GitHub Stats..."
+          curl -o stats.svg "https://github-readme-stats.vercel.app/api?username=DiegoLangreo7&show_icons=true&theme=tokyonight&count_private=true"
+          curl -o streak.svg "https://nirzak-streak-stats.vercel.app/?user=DiegoLangreo7&theme=tokyonight&hide_border=true"
+          curl -o trophies.svg "https://github-profile-trophy.vercel.app/?username=DiegoLangreo7&theme=radical&no-frame=true&no-bg=true&margin-w=4"
+
+      - name: Validate SVG generation
+        run: |
+          if [ ! -f stats.svg ] || [ ! -f streak.svg ] || [ ! -f trophies.svg ]; then
+            echo "SVG files not generated correctly."
+            exit 1
+          fi
+
+      - name: Update README
+        run: |
+          echo "Updating README.md..."
+          sed -i.bak '/<!--STATS_START-->/, /<!--STATS_END-->/c\<!--STATS_START-->\n![GitHub Stats](./stats.svg)\n![Streak Stats](./streak.svg)\n![Trophies](./trophies.svg)\n<!--STATS_END-->' README.md
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "Diego Langreo"
+          git config --global user.email "uo294255@uniovi.es"
+
+      - name: Commit and Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add README.md stats.svg streak.svg trophies.svg
+          git commit -m "Update README with new GitHub stats [skip ci]" || echo "No changes to commit"
+          git push

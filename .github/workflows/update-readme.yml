@@ -1,8 +1,9 @@
-name: Update GitHub Stats in README
+# .github/workflows/update-readme.yml
+name: Update README with GitHub Stats
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -15,29 +16,26 @@ jobs:
       - name: Generate GitHub Stats
         run: |
           echo "Generating GitHub Stats..."
-          curl -o stats.svg "https://github-readme-stats.vercel.app/api?username=DiegoLangreo7&show_icons=true&theme=tokyonight&count_private=true"
-          curl -o streak.svg "https://nirzak-streak-stats.vercel.app/?user=DiegoLangreo7&theme=tokyonight&hide_border=true"
-          curl -o trophies.svg "https://github-profile-trophy.vercel.app/?username=DiegoLangreo7&theme=radical&no-frame=true&no-bg=true&margin-w=4"
+          curl -s -o stats.svg "https://github-readme-stats.vercel.app/api?username=DiegoLangreo7&show_icons=true&theme=tokyonight&count_private=true"
+          curl -s -o streak.svg "https://nirzak-streak-stats.vercel.app/?user=DiegoLangreo7&theme=tokyonight&hide_border=true"
+          curl -s -o trophies.svg "https://github-profile-trophy.vercel.app/?username=DiegoLangreo7&theme=radical&no-frame=true&no-bg=true&margin-w=4"
 
-      - name: Validate SVG generation
+      - name: Validate SVG files
         run: |
-          if [ ! -f stats.svg ] || [ ! -f streak.svg ] || [ ! -f trophies.svg ]; then
-            echo "SVG files not generated correctly."
-            exit 1
-          fi
+          for f in stats.svg streak.svg trophies.svg; do
+            if [[ ! -s $f ]]; then
+              echo "Error: $f is missing or empty"
+              exit 1
+            fi
+          done
 
-      - name: Update README
-        run: |
-          echo "Updating README.md with Python..."
-          python3 - <<'EOF'
-import re
-
-# Lee el README
-with open('README.md', 'r', encoding='utf-8') as f:
-    text = f.read()
-
-# Define el bloque exacto que quieres insertar
-bloque = '''<!--STATS_START-->
+      - name: Update README via github-script
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            let content = fs.readFileSync('README.md', 'utf8');
+            const block = `<!--STATS_START-->
 
 ## 📊 GitHub Stats
 <div align="center">
@@ -54,25 +52,19 @@ bloque = '''<!--STATS_START-->
 ![Trophies](./trophies.svg)
 
 </div>
-<!--STATS_END-->'''
-
-# Reemplaza todo entre las dos etiquetas (inclusive) por 'bloque'
-nuevo = re.sub(r'<!--STATS_START-->.*?<!--STATS_END-->', bloque, text, flags=re.S)
-
-# Escribe de vuelta
-with open('README.md', 'w', encoding='utf-8') as f:
-    f.write(nuevo)
-EOF
+<!--STATS_END-->`;
+            const updated = content.replace(/<!--STATS_START-->[\s\S]*?<!--STATS_END-->/, block);
+            fs.writeFileSync('README.md', updated, 'utf8');
 
       - name: Configure Git
         run: |
-          git config --global user.name "Diego Langreo"
-          git config --global user.email "uo294255@uniovi.es"
+          git config user.name "Diego Langreo"
+          git config user.email "uo294255@uniovi.es"
 
       - name: Commit and Push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add README.md stats.svg streak.svg trophies.svg
-          git commit -m "Update README with new GitHub stats [skip ci]" || echo "No changes to commit"
+          git commit -m "chore: update GitHub stats [skip ci]" || echo "No changes to commit"
           git push

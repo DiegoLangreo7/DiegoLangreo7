@@ -110,32 +110,22 @@
 
     "<!--STATS_START-->
 
-" .
-    "## 📊 GitHub Stats
-" .
-    "<div align="center">
+## 📊 GitHub Stats
+<div align="center">
 
-" .
-    "![GitHub Stats](./stats.svg)
-" .
-    "![Streak Stats](./streak.svg)
+![GitHub Stats](./stats.svg)
+![Streak Stats](./streak.svg)
 
-" .
-    "</div>
+</div>
 
-" .
-    "## 🏆 GitHub Trophies
+## 🏆 GitHub Trophies
 
-" .
-    "<div align="center">
+<div align="center">
 
-" .
-    "![Trophies](./trophies.svg)
+![Trophies](./trophies.svg)
 
-" .
-    "</div>
-" .
-    "<!--STATS_END-->"
+</div>
+<!--STATS_END-->"
   
 
 ---

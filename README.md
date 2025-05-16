@@ -1,6 +1,13 @@
-<h1 align="center">Diego García</h1>
+<p align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Inconsolata&size=48&pause=1000&color=FFFFFF&background=0d1117&center=true&vCenter=true&width=500&height=120&lines=Diego+Garc%C3%ADa"alt="Typing Diego García"/>
+  </a>
+</p>
+
 <h3 align="center">Ⅺ</h3>
 <h3 align="center">Software Engineering Student at University of Oviedo</h3>
+
+
 
 # <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="30"> About me
 

@@ -46,7 +46,10 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="42" height="42" />
   <img width="12" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="42" height="42" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/astro.svg" alt="astro" width="42" height="42" />
 </div>
+
 
 ### Back-End Development
 <div align="left">
@@ -75,7 +78,10 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" height="40" alt="ansible logo"  />
   <img width="12" />
   <img src="https://cdn.simpleicons.org/docker/2496ED" height="40" alt="docker logo"  />
+  <img width="12" />
+  <img src="https://cdn.simpleicons.org/netlify/00C7B7" height="40" alt="netlify logo" />
 </div>
+
 
 ### Others
 <div align="left">

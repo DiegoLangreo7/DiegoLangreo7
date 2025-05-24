@@ -119,6 +119,6 @@
 ## 🏆 GitHub Trophies
 <p align="center"> 
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=DiegoLangreo7&theme=onedark&no-frame=true&no-bg=false&margin-h=4&margin-w=4" alt="omitg24" />
+    <img src="https://github-profile-trophy.vercel.app/?username=DiegoLangreo7&theme=darkhub&row=1&no-frame=true&no-bg=false&margin-h=4&margin-w=4"alt="DiegoLangreo7" />
   </a>
 </p>

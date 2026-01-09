@@ -37,6 +37,7 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
   <img width="12" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="kotlin" width="42" height="42" />
 </div>
 
 ### Front-End Development
@@ -80,7 +81,6 @@
   <img src="https://cdn.simpleicons.org/netlify/00C7B7" height="40" alt="netlify logo" />
 </div>
 
-
 ### Others
 <div align="left">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="42" height="42" />
@@ -90,6 +90,8 @@
   <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="42" height="42" />
   <img width="12" />
   <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="42" height="42" />
+  <img width="12" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/androidstudio/androidstudio-original.svg" alt="androidstudio" width="42" height="42" />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=powershell" height="40" alt="powershell logo"  />
 </div>
@@ -113,12 +115,5 @@
   <a href="https://github.com/DiegoLangreo7">
       <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=DiegoLangreo7&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
       <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=DiegoLangreo7&layout=compact&langs_count=8&theme=dark"/>      
-  </a>
-</p>
-
-## GitHub Trophies
-<p align="center"> 
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=DiegoLangreo7&theme=darkhub&row=1&no-frame=true&no-bg=false&margin-h=4&margin-w=4"alt="Not available now." />
   </a>
 </p>

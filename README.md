@@ -5,7 +5,7 @@
 </p>
 
 <h3 align="center">Ⅺ</h3>
-<h3 align="center">Software Engineering Student at University of Oviedo</h3>
+<h3 align="center">BSc on Software Engineering at University of Oviedo</h3>
 
 
 

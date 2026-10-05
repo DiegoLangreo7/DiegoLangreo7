@@ -22,7 +22,7 @@
 <div align="center">
 
 **Programming Languages**<br>
-<img src="https://skillicons.dev/icons?i=c,cpp,cs,java,js,ts,py,kotlin" /><br><br>
+<img src="https://skillicons.dev/icons?i=c,cpp,java,js,ts,py,kotlin" /><br><br>
 
 **Front-End**<br>
 <img src="https://skillicons.dev/icons?i=html,css,astro" /><br><br>
@@ -34,7 +34,7 @@
 <img src="https://skillicons.dev/icons?i=mysql,sqlite,mongodb" /><br><br>
 
 **DevOps & Cloud**<br>
-<img src="https://skillicons.dev/icons?i=azure,ansible,docker,netlify" /><br><br>
+<img src="https://skillicons.dev/icons?i=azure,terraform,ansible,docker" /><br><br>
 
 **Tools & Others**<br>
 <img src="https://skillicons.dev/icons?i=linux,git,arduino,bash,androidstudio,powershell" />
